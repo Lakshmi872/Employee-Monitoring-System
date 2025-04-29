@@ -1,0 +1,43 @@
+[Part 1] Admin PC Side Instructions:
+
+1> First download the emp_monitor and unzip the files to a folder on desktop 
+2> Make sure to have installed anaconda promt line 
+if not then visit this: https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Windows-x86_64.exe
+
+3> open anaconda promt from your start window by searching for it 
+
+4> once its open type cd and then go to the extracted folder and copy and paste the folder address from the folder address bar by double clicking the url and copying and pasting it,  to the anaconda promt window so it should look like this "cd C:\Users\SIDDH\Onerive\Documents\emp_monitor" and press enter
+
+5> Then Run This  command anaconda promt "python setup.py "
+
+6> Then once the setup.py is installed then. 
+
+6.5>Make sure to be in the same wifi network as the admin pc #important
+
+7> Then Run This  command in the anaconda promt admin pc "python Admin.py "
+
+
+------------------------------------------------------------------------------------------------
+
+
+[Part 2] Employee PC Side Instructions:
+
+0.5> make sure python is installed completely if not use this link: 
+
+1> First download emp_monitor and unzip the files to a folder on desktop or preferred location
+2> Make sure to have installed anaconda promt line 
+if not then visit this: https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Windows-x86_64.exe
+
+3> open anaconda promt from your start window by searching for it 
+
+4> once its open type cd and then go to the extracted folder and copy and paste the folder address from the folder address bar by double clicking the url and copying and pasting it, to the anaconda promt window so it should look like this "cd C:\Users\SIDDH\OneDrive\Documents\emp_monitor" and press enter
+
+5> Then Run This  command anaconda promt "python setup.py "
+
+6> Then once the setup.py is installed then. 
+
+6.5>Make sure to be in the same wifi network as the admin pc #important
+
+7> Then Run This  command in the anaconda promt admin pc "python Admin.py "
+
+8> Then Run This  command anaconda promt in employee pc "python setup.py "
