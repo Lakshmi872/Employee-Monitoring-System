@@ -5,31 +5,92 @@ The Employee Monitoring System is a comprehensive tool designed to track and mon
 USNs-for testing JSSATEB:1JS21EI026, 1JS21EI021
 
 Features
-Real-Time Activity Monitoring: Track employee activities and screen usage during work hours.
+Real-Time Monitoring
+Live Screen Sharing
+Capture and stream the employee’s screen in real-time using ImageGrab and PIL, allowing administrators to visually monitor current activity.
 
-Time Tracking: Log work hours, attendance, and breaks automatically.
+Webcam Feed Preview (Optional)
+Receive webcam frames from employee systems and view them via the Admin dashboard using cv2 and numpy.
 
-Productivity Analysis: Get insights into productive and non-productive time based on activity patterns.
+🧠 Intelligent System Design
+Efficient Image Compression & Streaming
+Images are serialized and compressed using io, PIL, and struct for optimal transmission over sockets.
 
-Task Assignment: Create, assign, and track the status of tasks for each employee.
+Multithreaded Communication
+The Admin system handles multiple employee connections concurrently using threading, maintaining responsiveness and scalability.
 
-Detailed Reports: Generate reports on employee performance, attendance, and task completion.
+Robust Socket-Based Networking
+Real-time, bidirectional communication is established via TCP sockets (socket), ensuring reliable data transfer.
 
-Activity Logging: Monitor and log applications and websites visited during work hours.
+📊 Logging & Productivity Insights
+Timestamped Activity Logs
+Screenshots and webcam images are logged with precise datetime stamps, useful for tracking activity over time.
 
-Customizable Alerts: Set up alerts for abnormal behavior or violations of work policies.
+Session Duration Monitoring
+Use time and datetime to compute active working hours or periods of inactivity.
 
-Secure Data: All employee data is stored securely and accessible only by authorized personnel.
+Idle Time Detection (extendable)
+Analyze repeated frames to detect inactivity or lack of input from the employee's end.
 
-Technologies Used
-Frontend: HTML, CSS, JavaScript (React.js / Vue.js)
+🖥️ Intuitive User Interface
+Admin Control Dashboard
+Built with tkinter and ttk, the Admin GUI provides:
 
-Backend: Node.js / Python (Flask / Django)
+Live stream viewing
 
-Database: MySQL / MongoDB
+Connected employee list
 
-Authentication: JWT (JSON Web Tokens), OAuth 2.0
+Start/stop controls
 
-Deployment: Docker, Kubernetes, AWS (or other cloud providers)
+Employee Interface
+Lightweight tkinter GUI for launching the monitoring client, including status indicators and error alerts via messagebox.
 
-Monitoring Tools: Google Analytics, Grafana (for performance monitoring)
+📁 File & Data Handling
+Optional Screenshot Archiving
+Admin can save screen captures locally with timestamps for future reference or compliance review.
+
+Lightweight Memory Usage
+Byte stream processing (io.BytesIO) ensures efficient RAM usage even with frequent image transfers.
+
+🔒 Security & Reliability (extendable)
+Offline Mode (Future Enhancement)
+Queue screenshots and send them when the connection is reestablished.
+
+Face Detection Support (Optional)
+Integrate OpenCV-based face recognition to confirm physical presence during sessions.
+
+Technologies & Libraries Used
+Admin Component
+tkinter – GUI development
+
+ttk – Themed tkinter widgets
+
+socket, threading – Networking and multithreading
+
+struct, io – Data serialization and I/O
+
+PIL (Pillow) – Image processing
+
+numpy – Array and image data handling
+
+cv2 (OpenCV) – Webcam image capture and video processing
+
+json – Configuration and data handling
+
+os, datetime – File and time management
+
+Employee Component
+tkinter, messagebox – GUI and message alerts
+
+socket, threading – Network communication
+
+time, datetime – Logging and timestamps
+
+PIL (Pillow) – Image handling
+
+io, struct – Stream and byte conversion
+
+ImageGrab, Image – Screen capture functionality (from PIL)
+
+
+
